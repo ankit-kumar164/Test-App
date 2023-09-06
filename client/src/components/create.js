@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 
+
 export default function Create() {
  const [form, setForm] = useState({
    name: "",
@@ -23,7 +24,7 @@ export default function Create() {
    // When a post request is sent to the create url, we'll add a new record to the database.
    const newPerson = { ...form };
 
-   await fetch(process.env.CYCLIC_URL.toString() + `/record`, {
+   await fetch(process.env.CYCLIC_URL.toString() + "/record", {
      method: "POST",
      headers: {
        "Content-Type": "application/json",

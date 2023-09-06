@@ -25,7 +25,7 @@ export default function RecordList() {
  // This method fetches the records from the database.
  useEffect(() => {
    async function getRecords() {
-     const response = await fetch(process.env.CYCLIC_URL.toString() + `/record`);
+     const response = await fetch(process.env.CYCLIC_URL.toString() + "/record");
 
      if (!response.ok) {
        const message = `An error occurred: ${response.statusText}`;
@@ -44,7 +44,7 @@ export default function RecordList() {
 
  // This method will delete a record
  async function deleteRecord(id) {
-   await fetch(process.env.CYCLIC_URL.toString() + `/record/${id}`, {
+   await fetch(process.env.CYCLIC_URL.toString() + "/record/" + id.toString(), {
      method: "DELETE"
    });
 
