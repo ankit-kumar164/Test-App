@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 dotenv
-const connectionString = process.env.ATLAS_URI || "";
+const connectionString = "mongodb+srv://ankit614:123456abc@ankit.r1q5cu3.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(connectionString);
 
