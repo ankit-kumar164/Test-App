@@ -4,7 +4,7 @@ import "./loadEnvironment.mjs";
 import records from "./routes/record.mjs";
 import path from "path";
 
-const PORT = process.env.CYCLIC_URL||3000;
+const PORT = process.env.PORT||3000;
 const app = express();
 const __dirname = path.resolve();
 
